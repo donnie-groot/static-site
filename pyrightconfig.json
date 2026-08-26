@@ -1,7 +1,0 @@
-{
-    "typeCheckingMode": "basic",
-    "reportMissingTypeStubs": false,
-    "reportUnusedCallResult": false,
-    "reportUnannotatedClassAttribute": false,
-    "reportGeneralTypeIssues": false
-}
