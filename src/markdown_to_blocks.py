@@ -25,7 +25,6 @@ def markdown_to_blocks(markdown):
     return blocks
 
 
-
 class BlockType(Enum):
     PARAGRAPH = "paragraph"
     HEADING = "heading"
@@ -179,8 +178,6 @@ def block_to_html_node(block):
             return unordered_list_to_html_node(block)
         case BlockType.ORDERED_LIST:
             return ordered_list_to_html_node(block)
-        
-    
 
 
 def markdown_to_html_node(markdown):
