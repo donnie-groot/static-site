@@ -6,13 +6,13 @@
 
 ###### local imports ######
 from copystatic import copy_file_recursive, delete_and_recreate
-from gencontent import generate_page
+from gencontent import  generate_pages_recursive
 
 
 def main():  
     delete_and_recreate("public")
     copy_file_recursive("static", "public")
-    generate_page("content/index.md", "template.html", "public/index.html")
+    generate_pages_recursive("content", "template.html", "public")
 
 if __name__ == "__main__":
     main()
