@@ -5,7 +5,6 @@
 #import from thing i downloaded 
 
 ###### local imports ######
-from textnode import TextNode
 from copystatic import copy_file_recursive, delete_and_recreate
 from gencontent import generate_page
 
