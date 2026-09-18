@@ -1,5 +1,5 @@
 ###### standard library imports ######
-#import os 
+import sys
 
 ###### 3rd party imports ######
 #import from thing i downloaded 
@@ -10,9 +10,12 @@ from gencontent import  generate_pages_recursive
 
 
 def main():  
-    delete_and_recreate("public")
-    copy_file_recursive("static", "public")
-    generate_pages_recursive("content", "template.html", "public")
-
+    base_path = "/"
+    if len(sys.argv) > 1:
+        base_path = sys.argv[1]
+        
+    delete_and_recreate("docs")
+    copy_file_recursive("static", "docs")
+    generate_pages_recursive("content", "template.html", "docs", base_path)
 if __name__ == "__main__":
     main()
